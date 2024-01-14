@@ -18,6 +18,7 @@ class FlaskTestCase(unittest.TestCase):
         app = index.create_app()
         app.debug = True
         self.app = app.test_client()
+        print("setup-tested")
 
     def test_route_hello_world(self):
         res = self.app.get("/")
@@ -32,4 +33,4 @@ class FlaskTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.index()
