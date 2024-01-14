@@ -8,14 +8,14 @@ Documentation:
 """
 import random
 import unittest
-import main
+import index
 
 
 class FlaskTestCase(unittest.TestCase):
     """ This is one of potentially many TestCases """
 
     def setUp(self):
-        app = main.create_app()
+        app = index.create_app()
         app.debug = True
         self.app = app.test_client()
 
