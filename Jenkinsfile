@@ -1,4 +1,4 @@
-node('slaves')  {
+node('Built-In Node')  {
     try {
     stage('Checkout') {
         checkout scm
