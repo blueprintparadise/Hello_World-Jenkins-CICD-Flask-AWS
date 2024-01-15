@@ -18,7 +18,7 @@ node('Built-In Node')  {
     }
 
     stage('Run') {
-        docker.image("pythontest:${env.BUILD_ID}").inside('-p 8000:8000'){
+        docker.image("pythontest:${env.BUILD_ID}").inside('-p 3000:3000'){
             sh 'python main.py &'
         }
         // sh 'docker run --rm -p 8000:8000 pythontest:${env.BUILD_ID} python test.py'
